@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Watermarked Images</title>
+</head>
+<body>
+    <h2>Watermarked Images</h2>
+    {% if images %}
+        {% for img in images %}
+            <div style="margin-bottom: 20px;">
+                <h4>{{ img.filename }}</h4>
+                <img src="{{ img.data }}" style="max-width: 500px;"/>
+                <br/>
+                <a href="{{ img.data }}" download="{{ img.filename }}">Download</a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No images processed.</p>
+    {% endif %}
+    <a href="/">Upload More</a>
+</body>
+</html>
