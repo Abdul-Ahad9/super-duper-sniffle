@@ -1,3 +1,4 @@
 pillow
 fastapi
 uvicorn
+jinja2
